@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="https://github.com/AsmrProg-YT/100-days-of-javascript/blob/master/Day%20%2310%20-%20Weather%20App/images/clear.png?raw=true">
+</head>
+<body class="bg-stone-700 flex flex-col items-center justify-center h-[100vh]">
+    <section class="container bg-gray-50 w-[80%] md:w-[50%] h-[105px] rounded-3xl flex flex-col overflow-hidden ease-out duration-200" id="container">
+        <!-- search-box -->
+        <div class="w-[80%] mx-auto flex flex-row items-center justify-around mt-9">
+            <label for="location-input">
+                <i class="uil uil-map-marker text-2xl"></i>
+            </label>
+            <input class="bg-gray-50 text-lg font-semibold mx-3 px-1 py-2 w-[220px] uppercase outline-0" type="text" name="" id="location-input" placeholder="Enter your location">
+            <i class="uil uil-search text-xl bg-gray-200 hover:bg-gray-300 ease-linear duration-200 cursor-pointer px-2 py-1 rounded-[40px]" id="search"></i>
+        </div>
+        <!-- weather information -->
+        <div class="w-full flex flex-col items-center mt-5 md:mt-0" >
+            <img id="weather-img" class="w-[40%]" src="" alt="">
+            <h1 class="text-3xl font-semibold my-2" id="temperature"></h1>
+            <p class="text-xl font-semibold" id="weather-content"></p>
+            
+            <div class="flex flex-row justify-between w-[85%] md:w-[80%] mt-10 md:mt-3">
+                <!-- temperature range -->
+                <div class="flex flex-row items-center">
+                    <!-- icon -->
+                    <i class="uil uil-temperature-half text-3xl"></i>
+                    <!-- min ~ max -->
+                    <div class="flex flex-col ml-3">
+                        <p class="text-2xl font-semibold" id="temperature-range"></p>
+                        <p class="text-lg">Temperature Range</p>
+                    </div>
+                </div>
+                <!-- humidity -->
+                <div class="flex flex-row items-center mt-2">
+                    <!-- icon -->
+                    <i class="uil uil-water text-3xl"></i>
+                    <!-- humidity -->
+                    <div class="flex flex-col ml-3">
+                        <p class="text-2xl font-semibold" id="humidity"></p>
+                        <p class="text-lg">Humidity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="module" src="script.js"></script>
+</html>
